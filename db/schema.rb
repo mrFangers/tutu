@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401000159) do
+ActiveRecord::Schema.define(version: 20170405072244) do
+
+  create_table "carriages", force: true do |t|
+    t.integer  "number"
+    t.integer  "top_seats"
+    t.integer  "bottom_seats"
+    t.integer  "side_top_seats"
+    t.integer  "side_bottom_seats"
+    t.integer  "train_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "railway_stations", force: true do |t|
     t.string   "title"
